@@ -1,0 +1,27 @@
+Build-App: #Название работы 
+  script: #обязательная команда
+    - echo: "Building application" #команда к раннеру
+    - echo "Done"
+
+Run_Unit_Test:
+  before script: 
+    -echo "Prepere testing Data"   
+   script:
+    - echo "Run unit test"
+after script:
+  - "Clin up temporary Data"
+Run_Lint:
+  script:
+    - echo "Runing Linter"
+
+Build_image:
+  script:
+    - echo  "Building images"
+
+Push_image:
+  script:
+    - echo "Pushing images"
+
+Deploy
+  script:
+     - echo "Deploy staging server"
